@@ -1,0 +1,11 @@
+package com.trmsmy.drools.dynamic 
+
+import com.trmsmy.drools.dynamic.*
+
+rule "Is of In-valid age"
+when
+    Person( age > 18 )  
+    $a : Action(  )  
+then
+$a.showBanner( false ); System.out.println("Invalid Age");
+end

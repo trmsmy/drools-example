@@ -1,0 +1,25 @@
+package com.trmsmy.drools.boolean_expression
+
+
+//a=a1 && b=b1 && l in  [l1, l2]
+rule "Rule 1-Group1"
+	ruleflow-group "rule1"
+	dialect "java"
+	when 
+		fact : BoolFact ( a == "a1" && b == "b1" ) 
+	then
+		fact.setaMatched(true);
+		fact.setbMatched(true);
+		System.out.println("in rule1, group1  ==> " + fact);
+end
+
+
+rule "Rule 1-Group2"
+	ruleflow-group "rule1"
+	dialect "java"
+	when 
+		fact : BoolFact ( l contains "l1" && l contains "l2" ) 
+	then
+		fact.setlMatched(true);
+		System.out.println("in rule1, group2" + fact);
+end

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+
+	<kbase name="helloworld-base" packages="com.trmsmy.drools.helloworld">
+		<ksession name="hello-world" />
+	</kbase>
+
+	<kbase name="boolean_expression-base" packages="com.trmsmy.drools.boolean_expression">
+		<ksession name="boolean_expression" />
+	</kbase>
+
+</kmodule>
